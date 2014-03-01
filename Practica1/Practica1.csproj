@@ -238,6 +238,7 @@
     <Content Include="Views\Recomendaciones\Index.cshtml" />
     <Content Include="Views\Contacto\_ViewStart.cshtml" />
     <Content Include="Views\Contacto\Index.cshtml" />
+    <Content Include="Views\Contacto\enviarCorreo.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

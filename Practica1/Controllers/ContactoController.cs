@@ -41,7 +41,7 @@ namespace Practica1.Controllers
             catch (Exception ex)
             {
             }
-            return View();
+            return Index();
         }
     }
 }
