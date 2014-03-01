@@ -1,8 +1,10 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace Practica1.Controllers
 {
@@ -32,14 +34,14 @@ namespace Practica1.Controllers
                 mail.To.Add("lilianaguerrero615@gmail.com");
 
                 SmtpServer.Port = 587; 
-                SmtpServer.Credentials = new System.Net.NetworkCredential("lilianaguerrero615@gmail.com", "password");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("lilianaguerrero615@gmail.com", "MOLINA23");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
             }
             catch (Exception ex)
             {
             }
-            return View("/Recomendaciones");
+            return View();
         }
     }
 }
