@@ -3,12 +3,48 @@
 }
 
 <div class="container">
-	<form class="form-signin" action="../recomendaciones/guardar" method="post">
-        <h2 class="form-signin-heading">Recomendar</h2>
-        <input type="Text" class="input-block-level" name="name" placeholder="Nombre"> 
-        <input type="Text" class="input-block-level" name="phone" placeholder="Teléfono"> 
-        <input type="Text" class="input-block-level" name="email" placeholder="Correo"> 
-        <textarea name="Comment" class="input-block-level"  placeholder="Comentario"></textarea><br />
-        <input class="btn btn-large btn-primary" type="submit" value="Enviar"> 
-    </form> 			
-</div>
+    <div class="row clearfix">
+        <div class="col-md-2 column"></div>
+	<form class="form-signin" action="/recomendaciones/create" method="post" >
+        <div class="col-md-4 column">
+
+                <div style="margin-bottom: 20px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon"></i></span>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre">                                        
+                </div>
+
+                <div style="margin-bottom: 20px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon"></i></span>
+                    <input type="text" class="form-control" name="telefono" placeholder="Telefono">                                        
+                </div>
+
+                <div style="margin-bottom: 20px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon"></i></span>
+                    <input type="text" class="form-control" name="correo"placeholder="Email">                                        
+                </div>
+
+            </div>
+                
+            <div class="col-md-4 column">
+                <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon"></i></span>
+                    <textarea class="form-control" id="message" name="comentario" placeholder="Comentario" rows="6"></textarea>
+                </div>
+                <button type="summit" class="btn btn-lng btn-primary pull-right">Enviar</button>
+            </div>
+        </form>
+
+        <div class="col-md-2column"></div>
+    </div><!--row--><br><br>
+
+    @foreach (var item in ViewBag.recomendaciones)
+        {
+            <div class="jumbotron">
+                <h3>@item.nombre</h3>
+                <h5>@item.telefono</h5>
+                <h5>@item.correo</h5>
+                <p>@item.comentario</p>
+            </div>
+        }
+
+    </div>

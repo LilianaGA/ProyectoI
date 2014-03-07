@@ -1,10 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 
 namespace Practica1.Controllers
 {
@@ -41,7 +39,7 @@ namespace Practica1.Controllers
             catch (Exception ex)
             {
             }
-            return Index();
+            return View();
         }
     }
 }
